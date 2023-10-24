@@ -37,7 +37,7 @@ EFI_STATUS EFIAPI efi_main (EFI_HANDLE ImageHandle, EFI_SYSTEM_TABLE *SystemTabl
 
   status = uefi_call_wrapper(BS->LocateProtocol, 3, &gopGuid, NULL, (void**)&gop);
   if(EFI_ERROR(status)){
-    Print(L"Unable to locate GOP v1");
+    Print(L"Unable to locate GOP v1 \n");
   } else {
     Print(L"Hello, world! locate gop v1 \n");
       EFI_GRAPHICS_OUTPUT_MODE_INFORMATION *info;
